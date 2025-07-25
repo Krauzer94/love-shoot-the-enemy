@@ -23,6 +23,14 @@ function love.update(dt)
     -- Bullet shooting action
     for i, v in ipairs(listOfBullets) do
         v:update(dt)
+
+        -- Check collition
+        v:checkCollision(enemy)
+
+        -- Destroy dead bullets
+        if v.dead then
+            table.remove(listOfBullets, i)
+        end
     end
 end
 
