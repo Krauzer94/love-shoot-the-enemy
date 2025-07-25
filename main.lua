@@ -1,5 +1,3 @@
-love.window.setTitle("Chapter 14 - Game: Shoot the enemy")
-
 function love.load()
     Object = require "classic"
 
