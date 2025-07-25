@@ -3,6 +3,9 @@ love.window.setTitle("Chapter 14 - Game: Shoot the enemy")
 function love.load()
     Object = require "classic"
 
+    -- Base class
+    require "gameobject"
+
     -- Main player
     require "player"
     player = Player()
