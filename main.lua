@@ -10,14 +10,32 @@ function love.load()
     -- Moving enemy
     require "enemy"
     enemy = Enemy()
+
+    -- Shooting bullet
+    require "bullet"
+    listOfBullets = {}
 end
 
 function love.update(dt)
     player:update(dt)
     enemy:update(dt)
+
+    -- Bullet shooting action
+    for i, v in ipairs(listOfBullets) do
+        v:update(dt)
+    end
 end
 
 function love.draw()
     player:draw()
     enemy:draw()
+
+    -- Bullet shooting action
+    for i, v in ipairs(listOfBullets) do
+        v:draw()
+    end
+end
+
+function love.keypressed(key)
+    player:keyPressed(key)
 end
