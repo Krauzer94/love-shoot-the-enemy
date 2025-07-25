@@ -15,11 +15,6 @@ function Bullet:update(dt)
     end
 end
 
-function Bullet:draw()
-    -- On-screen rendering
-    love.graphics.draw(self.image, self.x, self.y, 0)
-end
-
 function Bullet:checkCollision(obj)
     local self_left = self.x
     local self_right = self.x + self.width

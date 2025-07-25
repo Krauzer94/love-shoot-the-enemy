@@ -25,11 +25,6 @@ function Player:update(dt)
     end
 end
 
-function Player:draw()
-    -- On-screen rendering
-    love.graphics.draw(self.image, self.x, self.y, 0)
-end
-
 function Player:keyPressed(key)
     -- Bullet shooting action
     if key == "space" then

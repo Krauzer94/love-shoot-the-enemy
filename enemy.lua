@@ -21,8 +21,3 @@ function Enemy:update(dt)
         self.speed = -self.speed
     end
 end
-
-function Enemy:draw()
-    -- On-screen rendering
-    love.graphics.draw(self.image, self.x, self.y, 0)
-end
