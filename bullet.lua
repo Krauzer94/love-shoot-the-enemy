@@ -9,12 +9,9 @@ function Bullet:new(x, y)
     self.y = y
     self.speed = 700
 
-    -- Scalling factor
-    self.scale = 0.25
-
     -- Apply new scaling
-    self.width = self.image:getWidth() * self.scale
-    self.height = self.image:getHeight() * self.scale
+    self.width = self.image:getWidth()
+    self.height = self.image:getHeight()
 end
 
 function Bullet:update(dt)
@@ -27,7 +24,7 @@ function Bullet:update(dt)
 end
 
 function Bullet:draw()
-    love.graphics.draw(self.image, self.x, self.y, 0, self.scale, self.scale)
+    love.graphics.draw(self.image, self.x, self.y, 0)
 end
 
 function Bullet:checkCollision(obj)

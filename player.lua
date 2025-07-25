@@ -4,12 +4,9 @@ function Player:new()
     -- Shooting player
     self.image = love.graphics.newImage("images/panda.png")
 
-    -- Scalling factor
-    self.scale = 0.25
-
     -- Apply new scaling
-    self.width = self.image:getWidth() * self.scale
-    self.height = self.image:getHeight() * self.scale
+    self.width = self.image:getWidth()
+    self.height = self.image:getHeight()
 
     -- Player movement
     self.x = 300
@@ -38,7 +35,7 @@ end
 
 function Player:draw()
     -- On-screen rendering
-    love.graphics.draw(self.image, self.x, self.y, 0, self.scale, self.scale)
+    love.graphics.draw(self.image, self.x, self.y, 0)
 end
 
 function Player:keyPressed(key)
