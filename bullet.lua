@@ -16,6 +16,7 @@ function Bullet:update(dt)
 end
 
 function Bullet:draw()
+    -- On-screen rendering
     love.graphics.draw(self.image, self.x, self.y, 0)
 end
 

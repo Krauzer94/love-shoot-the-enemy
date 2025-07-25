@@ -23,5 +23,6 @@ function Enemy:update(dt)
 end
 
 function Enemy:draw()
+    -- On-screen rendering
     love.graphics.draw(self.image, self.x, self.y, 0)
 end
