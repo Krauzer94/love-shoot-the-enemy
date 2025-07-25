@@ -6,12 +6,18 @@ function love.load()
     -- Main player
     require "player"
     player = Player()
+
+    -- Moving enemy
+    require "enemy"
+    enemy = Enemy()
 end
 
 function love.update(dt)
     player:update(dt)
+    enemy:update(dt)
 end
 
 function love.draw()
     player:draw()
+    enemy:draw()
 end
