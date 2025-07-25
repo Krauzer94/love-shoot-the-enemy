@@ -1,17 +1,9 @@
-Bullet = Object:extend()
+Bullet = GameObject:extend()
 
 function Bullet:new(x, y)
     -- Player bullets
-    self.image = love.graphics.newImage("images/bullet.png")
-
-    -- Bullet movement
-    self.x = x
-    self.y = y
+    Bullet.super.new(self, "images/bullet.png", x, y)
     self.speed = 700
-
-    -- Apply new scaling
-    self.width = self.image:getWidth()
-    self.height = self.image:getHeight()
 end
 
 function Bullet:update(dt)

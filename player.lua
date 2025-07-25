@@ -1,16 +1,8 @@
-Player = Object:extend()
+Player = GameObject:extend()
 
 function Player:new()
-    -- Shooting player
-    self.image = love.graphics.newImage("images/panda.png")
-
-    -- Apply new scaling
-    self.width = self.image:getWidth()
-    self.height = self.image:getHeight()
-
-    -- Player movement
-    self.x = 300
-    self.y = 20
+    -- Playable character
+    Player.super.new(self, "images/panda.png", 300, 20, 500)
     self.speed = 500
 end
 

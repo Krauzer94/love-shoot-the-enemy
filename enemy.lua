@@ -1,16 +1,8 @@
-Enemy = Object:extend()
+Enemy = GameObject:extend()
 
 function Enemy:new()
     -- Moving enemy
-    self.image = love.graphics.newImage("images/snake.png")
-
-    -- Apply new scaling
-    self.width = self.image:getWidth()
-    self.height = self.image:getHeight()
-
-    -- Enemy movement
-    self.x = 325
-    self.y = 450
+    Enemy.super.new(self, "images/snake.png", 325, 450)
     self.speed = 100
 end
 
