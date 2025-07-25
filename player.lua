@@ -40,3 +40,10 @@ function Player:draw()
     -- On-screen rendering
     love.graphics.draw(self.image, self.x, self.y, 0, self.scale, self.scale)
 end
+
+function Player:keyPressed(key)
+    -- Bullet shooting action
+    if key == "space" then
+        table.insert(listOfBullets, Bullet(self.x, self.y))
+    end
+end
