@@ -17,6 +17,15 @@ function Player:new()
     self.speed = 500
 end
 
+function Player:update(dt)
+    -- Movement animation
+    if love.keyboard.isDown("left") then
+        self.x = self.x - self.speed * dt
+    elseif love.keyboard.isDown("right") then
+        self.x = self.x + self.speed * dt
+    end
+end
+
 function Player:draw()
     -- On-screen rendering
     love.graphics.draw(self.image, self.x, self.y, 0, self.scale, self.scale)
