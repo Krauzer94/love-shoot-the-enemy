@@ -19,6 +19,11 @@ end
 
 function Bullet:update(dt)
     self.y = self.y + self.speed * dt
+
+    -- Game reset rule
+    if self.y > love.graphics.getHeight() then
+        love.load()
+    end
 end
 
 function Bullet:draw()
